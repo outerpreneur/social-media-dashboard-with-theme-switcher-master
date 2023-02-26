@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  /* ## Colors */
+
+  /* ### Primary */
+
+  --Lime-Green: hsl(163, 72%, 41%);
+  --Bright-Red: hsl(356, 69%, 56%);
+
+  --Facebook: hsl(208, 92%, 53%);
+  --Twitter: hsl(203, 89%, 53%);
+  --Instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  --YouTube: hsl(348, 97%, 39%);
+
+  /* #### Dark Theme */
+
+  --Toggle: linear-gradient(to right, hsl(210, 78%, 56%) to hsl(146, 68%, 55%));
+
+  /* #### Light Theme */
+
+  --toggle: hsl(230, 22%, 74%);
+
+  /* ### Neutral */
+
+  /* #### Dark Theme */
+
+  --Very-Dark-Blue-bg: hsl(230, 17%, 14%);
+  --Very-Dark-Blue-Top-BG-Pattern: hsl(232, 19%, 15%);
+  --Dark-Desaturated-blue-Card-BG: hsl(228, 28%, 20%);
+  --Desaturated-Blue-text: hsl(228, 34%, 66%);
+  --White-Text: hsl(0, 0%, 100%);
+
+  /* #### Light Theme */
+
+  --White-BG: hsl(0, 0%, 100%);
+  --Very-Pale-Blue-Top-BG-Pattern: hsl(225, 100%, 98%);
+  --Light-Grayish-Blue-Card-BG: hsl(227, 47%, 96%);
+  --Dark-Grayish-Blue-Text: hsl(228, 12%, 44%);
+  --Very-Dark-Blue-Text: hsl(230, 17%, 14%);
+
+  /* ## Typography */
+
+  /* ### Body Copy */
+
+  --Font-size-Overview-Card-Headings: 14px;
+
+  /* ### Font */
+
+  --Family: "Inter", sans-serif;
+  --Weights: 400, 700;
+}
+
+/* reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* structure */
+
+body {
+  font-family: var(--Family);
+}
+
+main {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5em;
+}
+
+/* header */
+
+header {
+  width: 80%;
+  margin: 0 auto;
+  padding: 3em 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mode-switch {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* main metrics section */
+
+.main-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2em;
+}
+
+.block-background {
+  display: flex;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.main-metrics .block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--Light-Grayish-Blue-Card-BG);
+  height: 98%;
+  width: 100%;
+  align-self: flex-end;
+  padding: 2em;
+  border-radius: 0 0 10px 10px;
+  text-align: center;
+  gap: 2em;
+}
+
+.facebook {
+  background-color: var(--Facebook);
+}
+
+.instagram {
+  background: var(--Instagram);
+}
+
+.twitter {
+  background-color: var(--Twitter);
+}
+.youtube {
+  background-color: var(--YouTube);
+}
+
+.handle {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+}
+
+/* overview */
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
